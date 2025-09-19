@@ -103,7 +103,7 @@ def load_css():
         font-family: 'Inter', sans-serif;
         font-size: 0.75rem;
         font-weight: 600;
-        color: var(--text-secondary);
+        color: #FFFFFF;
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 1rem;
@@ -176,7 +176,7 @@ def load_css():
 
     .user-info p {
         margin: 0;
-        color: var(--text-secondary);
+        color: #FFFFFF;
         font-size: 0.75rem;
     }
 
@@ -239,7 +239,7 @@ def load_css():
     .metric-title {
         font-family: 'Inter', sans-serif;
         font-size: 1.2rem;
-        color: var(--text-secondary);
+        color: #FFFFFF;
         margin-bottom: 0.5rem;
         font-weight: 500;
     }
@@ -256,7 +256,7 @@ def load_css():
         display: flex;
         align-items: center;
         font-size: 1rem;
-        color: var(--text-secondary);
+        color: #FFFFFF;
     }
 
     .trend-up {
@@ -443,7 +443,7 @@ def render_dashboard():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Crop Yield Progress</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #FFFFFF;">
                     📊 Yield Chart Placeholder
                 </div>
             </div>
@@ -454,7 +454,7 @@ def render_dashboard():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Weather Forecast</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #FFFFFF;">
                     🌤️ Weather Chart Placeholder
                 </div>
             </div>
@@ -465,7 +465,7 @@ def render_dashboard():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Market Prices</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #FFFFFF;">
                     💰 Price Chart Placeholder
                 </div>
             </div>
@@ -479,7 +479,7 @@ def render_dashboard():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Disease Detection</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #FFFFFF;">
                     🔬 Disease Analysis Placeholder
                 </div>
             </div>
@@ -488,7 +488,7 @@ def render_dashboard():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Government Schemes</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #FFFFFF;">
                     🏛️ Schemes Placeholder
                 </div>
             </div>
