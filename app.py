@@ -37,7 +37,7 @@ def load_css():
     <style>
     /* Import Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    
+
     /* Root variables */
     :root {
         --primary-color: #1A3636;
@@ -53,58 +53,33 @@ def load_css():
         --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
-    
+
     /* Global styles */
     .main {
         padding: 0 !important;
         background: linear-gradient(135deg, #0F1F1F 0%, #1A2A2A 100%);
         min-height: 100vh;
     }
-    
+
     .stApp {
         background: linear-gradient(135deg, #0F1F1F 0%, #1A2A2A 100%);
     }
-    
+
     /* Sidebar styling */
     .css-1d391kg {
         background: var(--gradient-primary) !important;
         border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .css-1d391kg .css-1v0mbdj {
         color: var(--text-primary) !important;
     }
-    
+
     /* Hide default Streamlit elements */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
-    
-    /* Custom dashboard layout */
-    .dashboard-container {
-        display: flex;
-        min-height: 100vh;
-        background: linear-gradient(135deg, #0F1F1F 0%, #1A2A2A 100%);
-    }
-    
-    .sidebar {
-        width: 280px;
-        background: var(--gradient-primary);
-        padding: 2rem 1.5rem;
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-        position: fixed;
-        height: 100vh;
-        overflow-y: auto;
-        z-index: 1000;
-    }
-    
-    .main-content {
-        margin-left: 280px;
-        padding: 2rem;
-        width: calc(100% - 280px);
-        background: linear-gradient(135deg, #0F1F1F 0%, #1A2A2A 100%);
-    }
-    
+
     /* Logo and branding */
     .logo {
         font-family: 'Inter', sans-serif;
@@ -118,12 +93,12 @@ def load_css():
         border-radius: 12px;
         backdrop-filter: blur(10px);
     }
-    
+
     /* Navigation */
     .nav-section {
         margin-bottom: 2rem;
     }
-    
+
     .nav-title {
         font-family: 'Inter', sans-serif;
         font-size: 0.75rem;
@@ -133,7 +108,7 @@ def load_css():
         letter-spacing: 1px;
         margin-bottom: 1rem;
     }
-    
+
     .nav-item {
         display: flex;
         align-items: center;
@@ -147,29 +122,29 @@ def load_css():
         font-family: 'Inter', sans-serif;
         font-weight: 500;
     }
-    
+
     .nav-item:hover {
         background: rgba(255, 255, 255, 0.1);
         transform: translateX(4px);
     }
-    
+
     .nav-item.active {
         background: rgba(255, 255, 255, 0.15);
         border-left: 3px solid var(--success-color);
     }
-    
+
     .nav-icon {
         margin-right: 0.75rem;
         font-size: 1.1rem;
     }
-    
+
     /* User account section */
     .user-account {
         margin-top: auto;
         padding-top: 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .user-profile {
         display: flex;
         align-items: center;
@@ -178,7 +153,7 @@ def load_css():
         border-radius: 12px;
         margin-bottom: 1rem;
     }
-    
+
     .user-avatar {
         width: 40px;
         height: 40px;
@@ -191,20 +166,20 @@ def load_css():
         color: white;
         font-weight: 600;
     }
-    
+
     .user-info h4 {
         margin: 0;
         color: var(--text-primary);
         font-size: 0.9rem;
         font-weight: 600;
     }
-    
+
     .user-info p {
         margin: 0;
         color: var(--text-secondary);
         font-size: 0.75rem;
     }
-    
+
     /* Main content styling */
     .page-header {
         display: flex;
@@ -212,7 +187,7 @@ def load_css():
         align-items: center;
         margin-bottom: 2rem;
     }
-    
+
     .page-title {
         font-family: 'Inter', sans-serif;
         font-size: 2rem;
@@ -220,7 +195,7 @@ def load_css():
         color: var(--text-primary);
         margin: 0;
     }
-    
+
     .add-widget-btn {
         background: var(--gradient-accent);
         color: var(--text-primary);
@@ -233,12 +208,12 @@ def load_css():
         transition: all 0.3s ease;
         box-shadow: var(--shadow);
     }
-    
+
     .add-widget-btn:hover {
         transform: translateY(-2px);
         box-shadow: var(--shadow-lg);
     }
-    
+
     /* Metrics cards */
     .metrics-grid {
         display: grid;
@@ -246,7 +221,7 @@ def load_css():
         gap: 1.5rem;
         margin-bottom: 2rem;
     }
-    
+
     .metric-card {
         background: var(--gradient-accent);
         border-radius: 12px;
@@ -255,47 +230,47 @@ def load_css():
         transition: all 0.3s ease;
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .metric-card:hover {
         transform: translateY(-4px);
         box-shadow: var(--shadow-lg);
     }
-    
+
     .metric-title {
         font-family: 'Inter', sans-serif;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         color: var(--text-secondary);
         margin-bottom: 0.5rem;
         font-weight: 500;
     }
-    
+
     .metric-value {
         font-family: 'Inter', sans-serif;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         color: var(--text-primary);
         margin-bottom: 0.5rem;
     }
-    
+
     .metric-trend {
         display: flex;
         align-items: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
         color: var(--text-secondary);
     }
-    
+
     .trend-up {
         color: var(--success-color);
     }
-    
+
     .trend-down {
         color: var(--danger-color);
     }
-    
+
     .trend-icon {
         margin-right: 0.25rem;
     }
-    
+
     /* Charts and visualizations */
     .chart-container {
         background: var(--gradient-accent);
@@ -305,7 +280,7 @@ def load_css():
         box-shadow: var(--shadow);
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .chart-title {
         font-family: 'Inter', sans-serif;
         font-size: 1.1rem;
@@ -313,7 +288,7 @@ def load_css():
         color: var(--text-primary);
         margin-bottom: 1rem;
     }
-    
+
     /* Community card */
     .community-card {
         background: linear-gradient(135deg, #2C5555 0%, #3A6666 100%);
@@ -323,7 +298,7 @@ def load_css():
         overflow: hidden;
         box-shadow: var(--shadow-lg);
     }
-    
+
     .community-card::before {
         content: '';
         position: absolute;
@@ -335,12 +310,12 @@ def load_css():
         background-size: contain;
         opacity: 0.3;
     }
-    
+
     .community-content {
         position: relative;
         z-index: 1;
     }
-    
+
     .community-title {
         font-family: 'Inter', sans-serif;
         font-size: 1.5rem;
@@ -348,14 +323,14 @@ def load_css():
         color: var(--text-primary);
         margin-bottom: 1rem;
     }
-    
+
     .community-text {
         font-family: 'Inter', sans-serif;
         font-size: 1.1rem;
         color: var(--text-primary);
         margin-bottom: 1.5rem;
     }
-    
+
     .community-stats {
         display: flex;
         align-items: center;
@@ -363,13 +338,13 @@ def load_css():
         font-size: 0.9rem;
         margin-bottom: 1rem;
     }
-    
+
     .community-badges {
         display: flex;
         gap: 0.5rem;
         flex-wrap: wrap;
     }
-    
+
     .badge {
         background: rgba(255, 255, 255, 0.2);
         color: var(--text-primary);
@@ -378,39 +353,28 @@ def load_css():
         font-size: 0.75rem;
         font-weight: 500;
     }
-    
+
     /* Responsive design */
     @media (max-width: 768px) {
-        .sidebar {
-            width: 100%;
-            position: relative;
-            height: auto;
-        }
-        
-        .main-content {
-            margin-left: 0;
-            width: 100%;
-        }
-        
         .metrics-grid {
             grid-template-columns: 1fr;
         }
     }
-    
+
     /* Custom scrollbar */
     ::-webkit-scrollbar {
         width: 6px;
     }
-    
+
     ::-webkit-scrollbar-track {
         background: rgba(255, 255, 255, 0.1);
     }
-    
+
     ::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.3);
         border-radius: 3px;
     }
-    
+
     ::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.5);
     }
@@ -420,147 +384,131 @@ def load_css():
 # Load CSS
 load_css()
 
-# Sidebar navigation
-def render_sidebar():
+# Initialize session state
+if 'current_page' not in st.session_state:
+    st.session_state.current_page = 'dashboard'
+
+def render_dashboard():
     st.markdown("""
-    <div class="sidebar">
-        <div class="logo">
-            🌾 Kerala Farmers Hub
-        </div>
-        
-        <div class="nav-section">
-            <div class="nav-title">Navigation</div>
-            <div class="nav-item active">
-                <span class="nav-icon">📊</span>
-                Dashboard
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">📈</span>
-                Analytics
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">👥</span>
-                Community
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">📋</span>
-                Reports
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">❓</span>
-                Support
-            </div>
-        </div>
-        
-        <div class="user-account">
-            <div class="nav-title">User Account</div>
-            <div class="user-profile">
-                <div class="user-avatar">👤</div>
-                <div class="user-info">
-                    <h4>Alex Williamson</h4>
-                    <p>#farmer-1974</p>
-                </div>
-            </div>
-        </div>
+    <div class="page-header">
+        <h1 class="page-title">Dashboard</h1>
+        <button class="add-widget-btn">Add Custom Widget</button>
     </div>
     """, unsafe_allow_html=True)
 
-# Main dashboard content
-def render_dashboard():
-    st.markdown("""
-    <div class="main-content">
-        <div class="page-header">
-            <h1 class="page-title">Dashboard</h1>
-            <button class="add-widget-btn">Add Custom Widget</button>
-        </div>
-        
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-title">Crop Health Index</div>
-                <div class="metric-value">85.2%</div>
-                <div class="metric-trend trend-up">
-                    <span class="trend-icon">↗</span>
-                    3.2% than last month
-                </div>
-            </div>
-            
-            <div class="metric-card">
-                <div class="metric-title">Soil Quality Score</div>
-                <div class="metric-value">78.5/100</div>
-                <div class="metric-trend trend-down">
-                    <span class="trend-icon">↘</span>
-                    1.4% than last month
-                </div>
-            </div>
-            
-            <div class="metric-card">
-                <div class="metric-title">Market Revenue</div>
-                <div class="metric-value">₹2,45,670</div>
-                <div class="metric-trend trend-up">
-                    <span class="trend-icon">↗</span>
-                    5.1% than last month
-                </div>
+    # Metrics Grid
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("""
+        <div class="metric-card">
+            <div class="metric-title">Crop Health Index</div>
+            <div class="metric-value">85.2%</div>
+            <div class="metric-trend trend-up">
+                <span class="trend-icon">↗</span>
+                3.2% than last month
             </div>
         </div>
-        
-        <div class="metrics-grid">
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("""
+        <div class="metric-card">
+            <div class="metric-title">Soil Quality Score</div>
+            <div class="metric-value">78.5/100</div>
+            <div class="metric-trend trend-down">
+                <span class="trend-icon">↘</span>
+                1.4% than last month
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col3:
+        st.markdown("""
+        <div class="metric-card">
+            <div class="metric-title">Market Revenue</div>
+            <div class="metric-value">₹2,45,670</div>
+            <div class="metric-trend trend-up">
+                <span class="trend-icon">↗</span>
+                5.1% than last month
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Charts
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        with st.container():
+            st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Crop Yield Progress</div>
                 <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
                     📊 Yield Chart Placeholder
                 </div>
             </div>
-            
+            """, unsafe_allow_html=True)
+
+    with col2:
+        with st.container():
+            st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Weather Forecast</div>
                 <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
                     🌤️ Weather Chart Placeholder
                 </div>
             </div>
-            
+            """, unsafe_allow_html=True)
+
+    with col3:
+        with st.container():
+            st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Market Prices</div>
                 <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
                     💰 Price Chart Placeholder
                 </div>
             </div>
-        </div>
-        
-        <div class="metrics-grid">
+            """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        with st.container():
+            st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Disease Detection</div>
                 <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
                     🔬 Disease Analysis Placeholder
                 </div>
             </div>
-            
+            """, unsafe_allow_html=True)
+        with st.container():
+            st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Government Schemes</div>
                 <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
                     🏛️ Schemes Placeholder
                 </div>
             </div>
-            
-            <div class="community-card">
-                <div class="community-content">
-                    <div class="community-title">🌾 Kerala Farmers Hub</div>
-                    <div class="community-text">Let's join our community</div>
-                    <div class="community-stats">
-                        <span>👥 15k+ farmers</span>
-                    </div>
-                    <div class="community-badges">
-                        <span class="badge">AI Assistant</span>
-                        <span class="badge">Expert Network</span>
-                    </div>
+            """, unsafe_allow_html=True)
+    with col2:
+        st.markdown("""
+        <div class="community-card">
+            <div class="community-content">
+                <div class="community-title">🌾 Kerala Farmers Hub</div>
+                <div class="community-text">Let's join our community</div>
+                <div class="community-stats">
+                    <span>👥 15k+ farmers</span>
+                </div>
+                <div class="community-badges">
+                    <span class="badge">AI Assistant</span>
+                    <span class="badge">Expert Network</span>
                 </div>
             </div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-# Initialize session state
-if 'current_page' not in st.session_state:
-    st.session_state.current_page = 'dashboard'
+        """, unsafe_allow_html=True)
 
 # Sidebar navigation
 def render_sidebar():
@@ -569,13 +517,13 @@ def render_sidebar():
         <h2 style="color: white; margin: 0;">🌾 Kerala Farmers Hub</h2>
     </div>
     """, unsafe_allow_html=True)
-    
+
     # Navigation menu
     st.sidebar.markdown("### Navigation")
-    
+
     pages = {
         "📊 Dashboard": "dashboard",
-        "🔬 Disease Detection": "disease", 
+        "🔬 Disease Detection": "disease",
         "🌱 Crop Recommendations": "crops",
         "🌤️ Weather Analytics": "weather",
         "🏡 Farm Management": "farm",
@@ -585,12 +533,12 @@ def render_sidebar():
         "👥 Community": "community",
         "🤖 AI Assistant": "chatbot"
     }
-    
+
     for page_name, page_key in pages.items():
         if st.sidebar.button(page_name, use_container_width=True):
             st.session_state.current_page = page_key
             st.rerun()
-    
+
     # User account section
     st.sidebar.markdown("---")
     st.sidebar.markdown("### User Account")
