@@ -361,16 +361,6 @@ class WeatherAnalytics:
                 y=1.02,
                 xanchor="right",
                 x=1
-            ),
-            xaxis=dict(
-                gridcolor='rgba(255, 255, 255, 0.2)',
-                linecolor='rgba(255, 255, 255, 0.5)',
-                zerolinecolor='rgba(255, 255, 255, 0.5)'
-            ),
-            yaxis=dict(
-                gridcolor='rgba(255, 255, 255, 0.2)',
-                linecolor='rgba(255, 255, 255, 0.5)',
-                zerolinecolor='rgba(255, 255, 255, 0.5)'
             )
         )
         
