@@ -297,13 +297,13 @@ class SoilHealthAssessment:
             col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
             
             with col1:
-                st.text(row["Nutrient"])
+                st.markdown(row["Nutrient"])
             
             with col2:
-                st.text(f"{row['Value']}")
+                st.markdown(f"{row['Value']}")
             
             with col3:
-                st.text(f"{row['Score']:.0f}%")
+                st.markdown(f"{row['Score']:.0f}%")
             
             with col4:
                 if row["Status"] == "Optimal":
@@ -369,7 +369,7 @@ class SoilHealthAssessment:
             col1, col2 = st.columns([2, 1])
             
             with col1:
-                st.text(crop)
+                st.markdown(crop)
             
             with col2:
                 if score >= 80:
