@@ -231,7 +231,7 @@ class CropRecommendation:
                         # Suitability factors
                         st.markdown("**Suitability Breakdown:**")
                         for factor in rec['factors']:
-                            st.text(f"• {factor}")
+                            st.markdown(f"• {factor}")
                         
                         # Additional recommendations
                         if rec['score'] > 80:

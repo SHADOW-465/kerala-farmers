@@ -357,22 +357,22 @@ class GovernmentSchemes:
                 # Eligibility criteria
                 st.markdown("**Eligibility Criteria:**")
                 for criteria in scheme['eligibility']:
-                    st.text(f"• {criteria}")
+                    st.markdown(f"• {criteria}")
                 
                 # Benefits
                 st.markdown("**Benefits:**")
                 for benefit in scheme['benefits']:
-                    st.text(f"• {benefit}")
+                    st.markdown(f"• {benefit}")
                 
                 # Documents required
                 st.markdown("**Documents Required:**")
                 for doc in scheme['documents_required']:
-                    st.text(f"• {doc}")
+                    st.markdown(f"• {doc}")
                 
                 # Application process
                 st.markdown("**Application Process:**")
                 for step in scheme['application_process']:
-                    st.text(f"• {step}")
+                    st.markdown(f"• {step}")
                 
                 # Action buttons
                 col1, col2, col3 = st.columns(3)
@@ -419,7 +419,7 @@ class GovernmentSchemes:
                 # Benefits
                 st.markdown("**Key Benefits:**")
                 for benefit in scheme['benefits'][:3]:  # Show first 3 benefits
-                    st.text(f"• {benefit}")
+                    st.markdown(f"• {benefit}")
                 
                 # Action buttons
                 col1, col2, col3 = st.columns(3)

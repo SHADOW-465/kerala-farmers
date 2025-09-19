@@ -225,17 +225,17 @@ class MarketPrices:
                 col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
                 
                 with col1:
-                    st.text(f"{row['crop']} - {row['market']}")
+                    st.markdown(f"{row['crop']} - {row['market']}")
                 
                 with col2:
-                    st.text(f"₹{row['price_per_kg']}/kg")
+                    st.markdown(f"₹{row['price_per_kg']}/kg")
                 
                 with col3:
-                    st.text(f"{row['volume_kg']} kg")
+                    st.markdown(f"{row['volume_kg']} kg")
                 
                 with col4:
                     quality_color = {"A": "🟢", "B": "🟡", "C": "🔴"}
-                    st.text(f"{quality_color[row['quality']]} {row['quality']}")
+                    st.markdown(f"{quality_color[row['quality']]} {row['quality']}")
         
         # Price trends
         if selected_crop != "All Crops":
@@ -298,13 +298,13 @@ class MarketPrices:
                         col1, col2, col3 = st.columns(3)
                         
                         with col1:
-                            st.text(f"Date: {pred['date']}")
+                            st.markdown(f"Date: {pred['date']}")
                         
                         with col2:
-                            st.text(f"Price: ₹{pred['predicted_price']}/kg")
+                            st.markdown(f"Price: ₹{pred['predicted_price']}/kg")
                         
                         with col3:
-                            st.text(f"Confidence: {pred['confidence']:.1%}")
+                            st.markdown(f"Confidence: {pred['confidence']:.1%}")
         
         # Market insights
         st.markdown("### 💡 Market Insights")
@@ -316,17 +316,17 @@ class MarketPrices:
         with col1:
             st.markdown("**📈 Top Gainers**")
             for crop, change in insights["top_gainers"]:
-                st.text(f"{crop}: +{change:.1f}%")
+                st.markdown(f"{crop}: +{change:.1f}%")
         
         with col2:
             st.markdown("**📉 Top Losers**")
             for crop, change in insights["top_losers"]:
-                st.text(f"{crop}: {change:.1f}%")
+                st.markdown(f"{crop}: {change:.1f}%")
         
         with col3:
             st.markdown("**📊 Stable Crops**")
             for crop in insights["stable_crops"][:3]:
-                st.text(f"{crop}: Stable")
+                st.markdown(f"{crop}: Stable")
         
         # Market recommendations
         st.markdown("### 🎯 Market Recommendations")

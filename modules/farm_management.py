@@ -323,16 +323,16 @@ class FarmManagement:
                 col1, col2, col3, col4 = st.columns([2, 2, 1, 1])
                 
                 with col1:
-                    st.text(f"{expense['category']} - {expense['description']}")
+                    st.markdown(f"{expense['category']} - {expense['description']}")
                 
                 with col2:
-                    st.text(f"{expense['quantity']} {expense['unit']}")
+                    st.markdown(f"{expense['quantity']} {expense['unit']}")
                 
                 with col3:
-                    st.text(f"₹{expense['amount']:,}")
+                    st.markdown(f"₹{expense['amount']:,}")
                 
                 with col4:
-                    st.text(expense['date'])
+                    st.markdown(expense['date'])
             
             # Add new expense button
             if st.button("➕ Add New Expense", type="primary"):
@@ -356,16 +356,16 @@ class FarmManagement:
                 with col1:
                     crop = next((c for c in self.farm_data["crops"] if c["id"] == harvest["crop_id"]), None)
                     crop_name = crop["crop_name"] if crop else "Unknown"
-                    st.text(f"{crop_name} - {harvest['harvest_date']}")
+                    st.markdown(f"{crop_name} - {harvest['harvest_date']}")
                 
                 with col2:
-                    st.text(f"{harvest['quantity']} {harvest['unit']}")
+                    st.markdown(f"{harvest['quantity']} {harvest['unit']}")
                 
                 with col3:
-                    st.text(f"₹{harvest['price_per_unit']}/{harvest['unit']}")
+                    st.markdown(f"₹{harvest['price_per_unit']}/{harvest['unit']}")
                 
                 with col4:
-                    st.text(f"₹{harvest['total_value']:,}")
+                    st.markdown(f"₹{harvest['total_value']:,}")
         else:
             st.info("No harvest records yet.")
     
