@@ -443,33 +443,52 @@ def render_dashboard():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Crop Yield Progress</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
-                    📊 Yield Chart Placeholder
-                </div>
             </div>
             """, unsafe_allow_html=True)
+            # Placeholder for chart
+            chart_data = pd.DataFrame(
+                np.random.randn(20, 3),
+                columns=['Rice', 'Wheat', 'Coconut'])
+            st.line_chart(chart_data)
 
     with col2:
         with st.container():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Weather Forecast</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
-                    🌤️ Weather Chart Placeholder
-                </div>
             </div>
             """, unsafe_allow_html=True)
+            weather_analytics = WeatherAnalytics()
+            forecast_data = weather_analytics.get_weather_forecast("Kozhikode")
+            daily_forecast = weather_analytics._process_forecast_data(forecast_data)
+            weather_analytics._render_weather_chart(daily_forecast)
 
     with col3:
         with st.container():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Market Prices</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
-                    💰 Price Chart Placeholder
-                </div>
             </div>
             """, unsafe_allow_html=True)
+            market_prices = MarketPrices()
+            trend_df = market_prices.get_price_trends("Rice")
+            fig = px.line(
+                trend_df,
+                x="date",
+                y="price_per_kg",
+                title="Rice Price Trend",
+                markers=True
+            )
+            fig.update_layout(
+                height=300,
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)',
+                font_color='white',
+                title_font_color='white',
+                xaxis_title="Date",
+                yaxis_title="Price (₹/kg)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -479,20 +498,21 @@ def render_dashboard():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Disease Detection</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
-                    🔬 Disease Analysis Placeholder
-                </div>
             </div>
             """, unsafe_allow_html=True)
+            if st.button("🔬 Go to Disease Detection"):
+                st.session_state.current_page = 'disease'
+                st.rerun()
+
         with st.container():
             st.markdown("""
             <div class="chart-container">
                 <div class="chart-title">Government Schemes</div>
-                <div style="height: 200px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
-                    🏛️ Schemes Placeholder
-                </div>
             </div>
             """, unsafe_allow_html=True)
+            if st.button("🏛️ Find Government Schemes"):
+                st.session_state.current_page = 'schemes'
+                st.rerun()
     with col2:
         st.markdown("""
         <div class="community-card">
@@ -509,6 +529,9 @@ def render_dashboard():
             </div>
         </div>
         """, unsafe_allow_html=True)
+        if st.button("👥 Join Community"):
+            st.session_state.current_page = 'community'
+            st.rerun()
 
 # Sidebar navigation
 def render_sidebar():
