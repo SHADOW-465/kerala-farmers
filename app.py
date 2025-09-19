@@ -44,7 +44,7 @@ def load_css():
         --secondary-color: #224444;
         --accent-color: #2C5555;
         --text-primary: #FFFFFF;
-        --text-secondary: #B0B0B0;
+        --text-secondary: #E0E0E0;
         --success-color: #4CAF50;
         --warning-color: #FF9800;
         --danger-color: #F44336;
