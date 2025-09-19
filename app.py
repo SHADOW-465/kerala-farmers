@@ -55,6 +55,9 @@ def load_css():
     }
 
     /* Global styles */
+    h1, h2, h3, h4, h5, h6, p, li, div, span, a {
+        color: white !important;
+    }
     .main {
         padding: 0 !important;
         background: linear-gradient(135deg, #0F1F1F 0%, #1A2A2A 100%);
@@ -449,7 +452,18 @@ def render_dashboard():
             chart_data = pd.DataFrame(
                 np.random.randn(20, 3),
                 columns=['Rice', 'Wheat', 'Coconut'])
-            st.line_chart(chart_data)
+            fig = px.line(chart_data)
+            fig.update_layout(
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)',
+                font_color='white',
+                title_font_color='white',
+                legend_title_font_color='white',
+                xaxis=dict(gridcolor='rgba(255,255,255,0.2)'),
+                yaxis=dict(gridcolor='rgba(255,255,255,0.2)'),
+                height=300,
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
     with col2:
         with st.container():
