@@ -242,7 +242,7 @@ class WeatherAnalytics:
         st.markdown(f"""
         <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; margin: 20px 0;">
             <h3 style="color: white; margin: 0;">{weather_condition['description'].title()}</h3>
-            <p style="color: #B0B0B0; margin: 5px 0;">Current conditions in {selected_district}</p>
+            <p style="color: var(--text-primary); margin: 5px 0;">Current conditions in {selected_district}</p>
         </div>
         """, unsafe_allow_html=True)
         
@@ -262,10 +262,10 @@ class WeatherAnalytics:
                 st.markdown(f"""
                 <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; text-align: center; margin-bottom: 10px;">
                     <h4 style="color: white; margin: 0 0 10px 0;">{day['date']}</h4>
-                    <p style="color: #B0B0B0; margin: 0 0 10px 0;">{day['condition']}</p>
+                    <p style="color: var(--text-primary); margin: 0 0 10px 0;">{day['condition']}</p>
                     <h3 style="color: white; margin: 0 0 5px 0;">{day['temp_max']}°</h3>
-                    <p style="color: #B0B0B0; margin: 0 0 10px 0;">{day['temp_min']}°</p>
-                    <p style="color: #B0B0B0; margin: 0; font-size: 0.8rem;">{day['humidity']}% humidity</p>
+                    <p style="color: var(--text-primary); margin: 0 0 10px 0;">{day['temp_min']}°</p>
+                    <p style="color: var(--text-primary); margin: 0; font-size: 0.8rem;">{day['humidity']}% humidity</p>
                 </div>
                 """, unsafe_allow_html=True)
         
