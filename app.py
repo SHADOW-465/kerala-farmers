@@ -43,8 +43,8 @@ def load_css():
         --primary-color: #1A3636;
         --secondary-color: #224444;
         --accent-color: #2C5555;
-        --text-primary: #FFFFFF;
-        --text-secondary: #FFFFFF;
+        --text-primary: #000000;
+        --text-secondary: #000000;
         --success-color: #4CAF50;
         --warning-color: #FF9800;
         --danger-color: #F44336;
@@ -57,12 +57,12 @@ def load_css():
     /* Global styles */
     .main {
         padding: 0 !important;
-        background: linear-gradient(135deg, #0F1F1F 0%, #1A2A2A 100%);
+        background: #FFFFFF;
         min-height: 100vh;
     }
 
     .stApp {
-        background: linear-gradient(135deg, #0F1F1F 0%, #1A2A2A 100%);
+        background: #FFFFFF;
     }
 
     /* Sidebar styling */
@@ -569,7 +569,7 @@ def render_sidebar():
     <div style="display: flex; align-items: center; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px;">
         <div style="width: 40px; height: 40px; border-radius: 50%; background: #4CAF50; display: flex; align-items: center; justify-content: center; margin-right: 10px; color: white; font-weight: bold;">👤</div>
         <div>
-            <div style="color: white; font-weight: bold;">Alex Williamson</div>
+            <div style="color: black; font-weight: bold;">Alex Williamson</div>
             <div style="color: var(--text-primary); font-size: 0.8rem;">#farmer-1974</div>
         </div>
     </div>
