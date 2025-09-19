@@ -44,7 +44,7 @@ def load_css():
         --secondary-color: #224444;
         --accent-color: #2C5555;
         --text-primary: #FFFFFF;
-        --text-secondary: #E0E0E0;
+        --text-secondary: #FFFFFF;
         --success-color: #4CAF50;
         --warning-color: #FF9800;
         --danger-color: #F44336;
@@ -547,7 +547,7 @@ def render_sidebar():
         <div style="width: 40px; height: 40px; border-radius: 50%; background: #4CAF50; display: flex; align-items: center; justify-content: center; margin-right: 10px; color: white; font-weight: bold;">👤</div>
         <div>
             <div style="color: white; font-weight: bold;">Alex Williamson</div>
-            <div style="color: #B0B0B0; font-size: 0.8rem;">#farmer-1974</div>
+            <div style="color: var(--text-primary); font-size: 0.8rem;">#farmer-1974</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
